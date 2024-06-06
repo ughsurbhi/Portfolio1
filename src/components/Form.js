@@ -5,7 +5,7 @@ const Form = () => {
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
   const [message, setMessage] = useState("")
-  const [submission,setSubmission]=usestate(null);
+  const [submission,setSubmission]=useState(null);
   const handleSubmit =async(e)=>{
     e.preventDefault();
     if(name.trim()===''||email.trim()===''||message.trim()===''){
