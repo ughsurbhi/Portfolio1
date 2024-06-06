@@ -15,7 +15,7 @@ const Form = () => {
           let url = `https://api.telegram.org/bot7165926545:AAGf24Zxi2Rk7SBZx9CI8QUwDMv8COG_Liw/sendMessage?chat_id=-1002159383571&text=${custommessage}`
           let response = await fetch(url);
           let data = await response.json();
-          // console.log(data);
+          console.log(data);
         }}
       >
         <label>Your Name</label>
