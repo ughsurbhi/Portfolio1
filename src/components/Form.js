@@ -18,20 +18,20 @@ const Form = () => {
       let response=await fetch(url);
       let data=await response.json();
       console.log(data);
-      setSubmissionStatus('success');
+      setSubmission('success');
       setName('');
       setEmail('');
       setMessage('');
     }
     catch (error) {
       console.error('Error submitting the form:', error);
-      setSubmissionStatus('error');
+      setSubmission('error');
     }
   };
   return (
     <div className="form">
-      {submissionStatus === 'success' && <p className="success-message">Message sent successfully!</p>}
-      {submissionStatus === 'error' && <p className="error-message">An error occurred. Please try again later.</p>}
+      {submission === 'success' && <p className="success-message">Message sent successfully!</p>}
+      {submission === 'error' && <p className="error-message">An error occurred. Please try again later.</p>}
       <form onSubmit={handleSubmit}>
         <label>Your Name</label>
         <input
