@@ -1,8 +1,11 @@
 import "./Footer.css"
 import React from 'react'
-import { FaBook } from "react-icons/fa"
+import { FaBook, FaGithub } from "react-icons/fa"
 import { IoIosMail } from "react-icons/io";
+import { FaLinkedin } from "react-icons/fa6";
 const Footer = () => {
+    const linkedinUrl="https://www.linkedin.com/in/surbhi-singh-59ba82201/";
+    const githubUrl="https://github.com/ughsurbhi";
   return (
     <div className="footer">
         <div className="foot-container">
@@ -22,7 +25,15 @@ const Footer = () => {
                 </div>
             </div>
 
-            <div className="right"></div>
+            <div className="right">
+                <h4>Let's connect!</h4>
+                <a href={linkedinUrl} target="_blank" rel="noopener noreferrer">
+                <FaLinkedin size={30} style={{color:"#fff",marginRight:"1rem"}}/>
+                </a>
+                <a href={githubUrl} target="_blank" rel="noopener noreferrer">
+                <FaGithub size={30} style={{color:"#fff",marginRight:"1rem"}}/>
+                </a>
+            </div>
         </div>
       
     </div>
