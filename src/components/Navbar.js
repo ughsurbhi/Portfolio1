@@ -1,6 +1,6 @@
 import "./NavStyle.css"
 
-import React,{useState} from 'react'
+import React,{useState,useEffect} from 'react'
 import { Link } from "react-router-dom";
 import {FaBars,FaTimes} from "react-icons/fa";
 //import { useEffect } from "react";
@@ -21,7 +21,12 @@ const Navbar = () => {
     }
   };
 
-window.addEventListener("scroll",changeColor);
+useEffect(()=>{
+  window.addEventListener("scroll",changeColor);
+  return()=>{
+    window.removeEventListener("scroll", changeColor);
+  };
+},[])
 
   return (
     <div className={color?"header header-bg":"header"}>
@@ -30,21 +35,21 @@ window.addEventListener("scroll",changeColor);
       </Link>
       <ul className={click ? "nav active" : "nav"}>
         <li>
-            <Link to="/">Home</Link>
+            <Link to="/" onClick={handleClick}>Home</Link>
         </li>
         <li>
-            <Link to="/projects">Projects</Link>
+            <Link to="/projects" onClick={handleClick}>Projects</Link>
         </li>
         <li>
-            <Link to="/about">About</Link>
+            <Link to="/about" onClick={handleClick}>About</Link>
         </li>
         <li>
-            <Link to="/contact">Contact</Link>
+            <Link to="/contact" onClick={handleClick}>Contact</Link>
         </li>
       </ul>
       <div className="burger" onClick={handleClick}>
         {click? (
-        <FaBars size={20} style={{color:'#fff'}} />):( <FaTimes size={20} style={{color:'#fff'}} />)}
+        <FaTimes size={20} style={{color:'#fff'}} />):( <FaBars size={20} style={{color:'#fff'}} />)}
       </div>
     </div>
   )
