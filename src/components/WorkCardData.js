@@ -1,7 +1,7 @@
 import calculator from "../assets/calculator.png"
 import notes from "../assets/notes.png"
-import thala from "../assets/thala.png"
-
+//import thala from "../assets/thala.png"
+import todo from "../assets/todo.png"
 const ProjectCardData=[
     {
         imgsrc:calculator,
@@ -18,11 +18,11 @@ const ProjectCardData=[
         source:"https://github.com/ughsurbhi/Notes"
     },
     {
-        imgsrc:thala,
-        title:"Thala For a Reason",
-        text:"A fun website which plays 'bole jo koyal' everytime you enter 7 or any keywords related to Dhoni(could be SAKSHI as well).",
-        view:"https://thala-for-a-reason-xi.vercel.app/",
-        source:"https://github.com/ughsurbhi/Thala-for-a-Reason"
+        imgsrc:todo,
+        title:"To-Do List",
+        text:"A web app that aids users in managing daily tasks.",
+        view:"https://vercel.com/surbhis-projects-6b067631/to-do-52l7",
+        source:"https://github.com/ughsurbhi/To-Do"
     }
 ];
 
